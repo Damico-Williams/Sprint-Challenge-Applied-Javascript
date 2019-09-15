@@ -9,7 +9,13 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {
+let information = [{
+    arch: 'SMARCH 28, 2019',
+    time: 'Lambda Times',
+    deg:'98°'
+  }];
+
+function Header(pass) {
     //create elements
     const wrapper = document.createElement('div');
     const date = document.createElement('span');
@@ -17,14 +23,14 @@ function Header() {
     const degree = document.createElement('span');
     
     //create structure
-    wrapper.appendChild(span);
+    wrapper.appendChild(date);
     wrapper.appendChild(head);
     wrapper.appendChild(degree);
 
     //add content
-    date.textContent = 'SMARCH 28, 2019';
-    head.textContent = 'Lambda Times';
-    degree.textContent = '98°';
+    date.textContent = pass.arch;
+    head.textContent = pass.time;
+    degree.textContent = pass.deg;
 
     //add styles
     wrapper.classList.add('header');
@@ -36,4 +42,8 @@ function Header() {
 
 }
 
-const add = document.querySelector('.header-container')
+const add = document.querySelector('.header-container');
+
+information.map(parameter => {
+    add.appendChild(Header(parameter));
+  });

@@ -9,10 +9,34 @@
 //    <div class="tab">topic here</div>
 
 axios
- .get('https://lambda-times-backend.herokuapp.com/topics');
+ .get('https://lambda-times-backend.herokuapp.com/topics')
  .then(results => {
      console.log(results.data)
+     results.data.map(parameter => {
+        complete.appendChild(topicFactory(parameter));
+     })
  })
  .catch(err => {
      console.log(err);
  })
+
+
+ function topicFactory(pass) {
+    //create elements
+    const topic = document.createElement('div');
+    
+    //create structure
+ 
+
+    //add content
+    // topic.textContent = pass.;
+    
+
+    //add styles
+    topic.classList.add('tab');
+
+    return topic;
+
+};
+
+const complete = document.querySelector('.topics')

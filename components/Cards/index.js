@@ -22,11 +22,11 @@
 axios
  .get('https://lambda-times-backend.herokuapp.com/articles')
  .then(results => {
-     const res = results.data.articles;
+     const articleData = results.data.articles;
     //  console.log()
-     Object.keys(res).forEach(param => {
-         res[param].forEach(param2 =>{
-             art.appendChild(articleFactory(param2));
+     Object.keys(articleData).forEach(category => {
+         articleData[category].forEach(articles =>{
+             art.appendChild(articleFactory(articles));
          })
      })
      

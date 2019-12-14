@@ -30,7 +30,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM? 
 
-//Document object model. References your code like a blueprint. Its a representation of your HTML
+//Document object model. References your code like a blueprint. Its a representation of your HTML.
 
 2. What is an event? 
 
@@ -38,11 +38,11 @@ Edit this document to include your answers after each question. Make sure to lea
 
 3. What is an event listener? 
 
-//A event look out for specific user interactions on a page.
+//A function that looks out for specific user interactions on a web application.
 
 4. Why would we convert a NodeList into an Array? 
 
-//We would convert a Nodelist to be able to use all the array properties on the data.
+//We would convert a Nodelist to an array to be able to use all the array properties on the data. Allowing the data to be manipulated.
 
 5. What is a component? 
 

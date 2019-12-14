@@ -29,10 +29,7 @@ axios
              art.appendChild(articleFactory(articles));
          })
      })
-     
-    //  results.data.bootstrap[0].map(parameter => {
-    //     art.appendChild(articleFactory(parameter));
-    //   }); 
+      
  })
  .catch(err => {
      console.log(err);

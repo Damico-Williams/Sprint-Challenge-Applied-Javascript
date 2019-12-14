@@ -13,7 +13,7 @@ axios
  .then(results => {
      //add .topics or not a function on forEach line 18
     const tabs = results.data.topics
-     console.log(tabs)
+      console.log(tabs)
   
      tabs.forEach(parameter => {
         complete.appendChild(topicFactory(parameter));
@@ -27,9 +27,6 @@ axios
  function topicFactory(pass) {
     //create elements
     const topic = document.createElement('div');
-    
-    
-    //create structure
    
 
     //add content
@@ -41,11 +38,12 @@ axios
     
     
     //on event listen a seperate class is activated
-    topic.addEventListener('mouseover', (event) => {
+    topic.addEventListener('mouseover', () => {
         topic.classList.toggle('active-tab');
    })
-   topic.addEventListener('mouseleave', (event) => {
-    topic.classList.toggle('active-tab');
+   
+    topic.addEventListener('mouseleave', () => {
+        topic.classList.toggle('active-tab');
    })
 
     return topic;
@@ -53,5 +51,6 @@ axios
 };
 
 const complete = document.querySelector('.topics')
+
 //adds a string to the beginning of the list
 complete.appendChild(topicFactory('all'))

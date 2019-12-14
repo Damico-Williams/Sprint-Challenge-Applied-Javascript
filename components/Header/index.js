@@ -11,7 +11,7 @@
 
 
 
-function Header(pass) {
+function Header() {
     //create elements
     const wrapper = document.createElement('div');
     const date = document.createElement('span');
@@ -41,5 +41,5 @@ function Header(pass) {
 const add = document.querySelector('.header-container');
 
 
-    add.appendChild(Header());
+add.appendChild(Header());
   

@@ -22,7 +22,14 @@
 axios
  .get('https://lambda-times-backend.herokuapp.com/articles')
  .then(results => {
-     console.log(results.data)
+     const articleData = results.data.articles;
+    //  console.log()
+     Object.keys(articleData).forEach(category => {
+         articleData[category].forEach(articles => {
+             art.appendChild(articleFactory(articles));
+         })
+     })
+      
  })
  .catch(err => {
      console.log(err);
@@ -46,8 +53,8 @@ function articleFactory(pass) {
 
     //add content
     headline.textContent = pass.headline;
-    imgUrl.textContent = pass.authorPhoto;
-    auname.textContent = pass.authorName;
+    imgUrl.setAttribute('src', pass.authorPhoto);
+    auName.textContent = pass.authorName;
 
     //add styles
     shell.classList.add('card');
@@ -60,4 +67,7 @@ function articleFactory(pass) {
 };
 
 const art = document.querySelector('.cards-container')
+
+
+
 

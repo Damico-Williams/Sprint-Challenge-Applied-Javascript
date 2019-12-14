@@ -25,7 +25,7 @@ axios
      const articleData = results.data.articles;
     //  console.log()
      Object.keys(articleData).forEach(category => {
-         articleData[category].forEach(articles =>{
+         articleData[category].forEach(articles => {
              art.appendChild(articleFactory(articles));
          })
      })
